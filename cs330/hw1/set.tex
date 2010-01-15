@@ -1,0 +1,107 @@
+
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%\usepackage{setspace}
+%\onehalfspacing
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+\lhead{Jay Mundrawala}
+\rhead{CS330 Homework 1}
+
+\begin{itemize}
+  \item[\textbf{2.1.2.2}] Let the universal set be $\{a,b,c,d,e,1,2,3,4,5\}$. For each pair of sets, $A$ and $B$, create a table
+    containing the following information:
+
+      \begin{tabular}{c | c | c | c}
+        \hline
+        Is $d \in A$? & Is $A \subseteq B$? & Is $B \subseteq A$? & Is $A = B$? \\ \hline
+        $A \cap B = \emptyset$ & $|A|$ & $|B|$ & $|\bar{A}$ \\ \hline
+        $A \cup B$ & $A \cap B$ & $A-B$ & $B-A$ \\ \hline
+      \end{tabular}
+
+    \begin{itemize}
+      \item[\textbf{d.}] $A = \{a,b,d,1,4,5\}$, $B = \{c,e,2,3\}$
+        
+          \begin{tabular}{c | c | c | c}
+            \hline
+            Yes & No & No & No \\ \hline
+            Yes & 6  & 4  & $B$ \\ \hline
+            $U$ & $\emptyset$ & $A$ & $B$ \\ \hline
+          \end{tabular}
+
+        \item[\textbf{e.}] $A = \{a,c,d,1,2,3\}$, $B = \{c,d,1,3\}$
+
+          \begin{tabular}{c | c | c | c}
+            \hline
+            Yes & No & Yes & No \\ \hline
+            No  & 6  & 4   & $\{b,e,4,5\}$ \\ \hline
+            $A$ & $B$ & $\{a,2\}$ & $\emptyset$ \\ \hline 
+          \end{tabular}
+    \end{itemize}
+
+  \item[\textbf{2.1.2.7}] Convert the following sets from set builder notation to a simple enumeration of the elements, using
+    the three dots convention when neccessary:
+    \begin{itemize}
+      \item[\textbf{a}] $ \{ x \in \mathbb{Z} \mid -2 \leq x < 10 \} $
+
+            $\{-2,-1,0,1,\dots,8,9\}$
+          \item[\textbf{b}] $ \{ x \in \mathbb{Z} \mid x \text{ mod } 5 = 0 \} $
+
+            $\{{\dots,-15,-10,-5,0,5,10,15,\dots}\}$
+    \end{itemize}
+
+  \item[\textbf{2.1.2.8}] Convert the following into set builder notation:
+    \begin{itemize}
+      \item[\textbf{c}] $\{\dots,(-3,9),(-2,4),(-1,1),(0,0),(1,1),(2,4),(3,9),\dots\}$
+        
+        $\{ \{x,x^2\} \mid x \textrm{ is an integer}\}$
+    \end{itemize}
+  \item[\textbf{2.1.2.9}] Convert the following into set builder notation:
+    \begin{itemize}
+      \item[\textbf{c}] $\{0,1,16,81,256\}$
+
+        $\{ x^4 \in \mathbb{Z} \mid 0 \leq x < 5\}$
+    \end{itemize}
+
+  \item[\textbf{2.1.2.14}] Find the symmetric difference for each of the following pairs of sets.
+    \begin{itemize}
+      \item[\textbf{c}] $A = \{2,4,6\}$, $B = \{1,3,5\}$
+
+        $A \bigtriangleup B = (A - B) \cup (B - A) = \{1,2,3,4,5,6\}$
+    \end{itemize}
+
+  \item[\textbf{2.1.2.22}] For each claim, determine whether it is always true or else false in some cases.
+    Then give justification for your answer.
+    \begin{itemize}
+      \item[\textbf{c}] The empty set is an element of every set\dots Always true because if every element $x$ of
+        $\emptyset$ was not in an arbitrary set $A$, then $\emptyset \subseteq A$ would be false.
+      \item[\textbf{g}] For all sets, $A$ and $B$, $(A-B) = (B-A)$\dots Can be false. For example, if $A = \{a,c\}$
+        and $B = \{b,d\}$, $(A-B) = \{ a,c\}$, $(B-A) = \{b,d\}$.
+    \end{itemize}
+
+  \item[\textbf{2.1.2.24}] Complete the following sentences:
+    \begin{itemize}
+      \item[\textbf{b}] $(A-B) = (B-A)$, then\dots $A=B$.
+      \item[\textbf{d}] $(A-B) = \emptyset$, then\dots $A \subseteq B$.
+    \end{itemize}
+
+  \item[\textbf{2.1.2.25}] Complete the following sentences:
+    \begin{itemize}
+      \item[\textbf{a}] If $A \subseteq B$ and $B \not \subseteq A$, then $A-B = $\dots$\emptyset$.
+    \end{itemize}
+\end{itemize}
+
+\end{document}
+
