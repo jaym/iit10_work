@@ -41,7 +41,7 @@
         Since this is a control mass, it must be a closed system. It is also steady.
     \end{enumerate}
 
-  \item[1.3] A 1000 kg car accelerates from 0 to $100 km/h$ in 10 seconds. Determine the work done by the engine, and the power of the engine if,
+  \item[1.3] A 1000 kg car accelerates from 0 to $100$ km/h in 10 seconds. Determine the work done by the engine, and the power of the engine if,
     \begin{enumerate}
       \item[a.] the road is horizontal. Assuming constant acceleration,
         \begin{align}
@@ -90,6 +90,29 @@
     \begin{enumerate}
       \item[a.] What is the pressure of the gas in the cylinder, assuming that the outside temperature and pressure are:
         $T=25C$ and $p=1atm$.
+
+        \setcounter{equation}{0}
+        \begin{align}
+          F_{piston} &= F_{spring} + mg \\
+          &= 100N + 29.4N \\
+          &= 129.4 N \\
+          A &= 0.0025 m^2 \\
+          P_{gas} &= \frac{(F_{spring} + mg)N}{A m^2} \cdot \frac{1 atm}{101325\frac{N}{m^2}} + 1atm \\
+          &= 1.51 atm
+        \end{align}
+
+      \item[b.] Now assume that the temperature of the gas is 100 C. Calculate the pressure of the gas.
+
+        If k is sufficiently large, this becomes a constant volume problem since the change in volume would
+        be negligible. The ideal gas law states that temperature is proportional to pressure. In this case,
+        temperature increases by a factor of 4, so the pressure must also increase by a factor of 4.
+
+        \setcounter{equation}{0}
+        \begin{align}
+          P_{new} &= 4 \cdot P_{old} \\
+          &= 4 \cdot 1.51 \\
+          &= 6.04 atm
+        \end{align}
 
     \end{enumerate}
 
