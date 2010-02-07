@@ -38,6 +38,7 @@ for i = 1:length(files)
 end
 
 %Query Interaction
+c=0;
 while(1)
     q_img = imread(input('query: ','s'));
     q_mean_r = mean(mean(q_img(:,:,1)));
@@ -67,9 +68,13 @@ while(1)
 
     t1 = imread(files{top1});
     t2 = imread(files{top2});
-    figure, axis image; 
-    subplot(1,3,1), imagesc(q_img);
-    subplot(1,3,2), imagesc(t1);
-    subplot(1,3,3), imagesc(t2);
+    figure;
+    subplot(1,3,1), imagesc(q_img); axis image;
+    subplot(1,3,2), imagesc(t1); axis image;
+    subplot(1,3,3), imagesc(t2); axis image;
+    output = ["data/s", num2str(c), ".eps"];
+    printf("Saving query as %s\n", output);
+    print(output, '-deps');
     pause(1);
+    c++;
 end
