@@ -12,6 +12,9 @@
 
 \usepackage{amssymb}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{upquote}
 \pagestyle{fancyplain}
 
 \renewcommand{\arraystretch}{1.5}
@@ -66,9 +69,63 @@
 \end{enumerate}
 
 \section{Computer Assignment}
-The program for searching is listed in Listing \ref{code:search}. The code to seperate an image into
-its RGB channels is listed in Listing \ref{code:rgb}. Both work, however Listing \ref{code:rgb} uses
+The program for searching is listed in Listing \ref{code:search}. The code to separate an image into
+its RGB channels is listed in Listing \ref{code:rgb}. Figure \ref{fig:q1} shows the results of q1.tif.
+Figure \ref{fig:q2} shows the results of q2.tif. In both cases, the leftmost image is the query, followed
+by the top result, and then the next best result.
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/0.eps}
+  \caption{Query q1.tif}
+  \label{fig:q1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/1.eps}
+  \caption{Query q2.tif}
+  \label{fig:q2}
+\end{figure}
+
+The colorplot3d program shows the 5 images in a 3D space. As expected, images 1 and 4 are close to each other
+and 2 and 5 are close to each other. 1 and 4 seem like predominately green images, however the 3D space shows
+that images 2 and 5 have a higher intensity of green. This can be explained by the amount of white in these 
+images, which would also explain the high intensity of blue in those images. Image 1 and 3 are quite close to
+each other even though they look nothing alike. That means that this search technique wont be very good if a
+query was very similar to image 1, maybe with a little more red and blue in it. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/c0.eps}
+  \caption{Image 1.tif along with its RGB channels}
+  \label{fig:rgb}
+\end{figure}
+
+\pagebreak
+\section{Code}
+\lstset{ %
+language=Octave,                % choose the language of the code
+basicstyle=\footnotesize,
+numbers=left,                   % where to put the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1 each line will be numbered
+numbersep=10pt,                  % how far the line-numbers are from the code
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=none,                    % adds a frame around the code
+tabsize=2,                  % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+upquote=true,
+breakatwhitespace=false        % sets if automatic breaks should only happen at whitespace
+}
+
+\lstset{caption=Search script,label=code:search}
+\lstinputlisting{../src/search.m}
+
+\lstset{caption=RGB Channel script,label=code:rgb}
+\lstinputlisting{../src/rgb_chan.m}
 
 \end{document}
 
