@@ -1,5 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%          File: search.m
+%        Author: Jay Mundrawala(jay@ir.iit.edu)
+%       Created: Sat Feb 6 2010
+%
+%   Description: This script reads the tif files in the images directory 
+%                and calculates their average values for the red, green, 
+%                and blue channels. It then asks the user for query images, 
+%                and displays the two closest images to the query image.
+%
+%         Usage: This script works correctly with octave. Make sure pwd is
+%                the root directory of the project.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Print current working directory...the images folder should be visible to
+%this directory.
 printf("pwd=%s\n",pwd());
+
+%Get non query images from the images directory
 dir_list = dir('./images/');
 files = {};
 for i = 1:length(dir_list)
@@ -8,8 +27,7 @@ for i = 1:length(dir_list)
     end
 end
 
-
-
+%Store mean rgb values for each image
 db_rgb = {};
 for i = 1:length(files)
     db_img = imread(files{i});
@@ -19,6 +37,7 @@ for i = 1:length(files)
     db_rgb{end+1} = [db_mean_r, db_mean_g, db_mean_b];
 end
 
+%Query Interaction
 while(1)
     q_img = imread(input('query: ','s'));
     q_mean_r = mean(mean(q_img(:,:,1)));
