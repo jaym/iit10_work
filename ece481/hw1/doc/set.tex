@@ -25,7 +25,7 @@
 
 \section{Written}
 \begin{enumerate}
-  \item[1a. ]
+  \item[\textbf{1a. }]
     \begin{equation} \label{eq:womix}
       \alpha_i(C) = \int C(\lambda) S_{i}(\lambda)\, d\lambda \\
     \end{equation}
@@ -66,6 +66,32 @@
       \beta_1 &=& \dfrac{3}{4} \\
       \beta_2 &=& \dfrac{1}{4}
     \end{eqnarray}
+  \item[\textbf{1b. }]
+    \begin{equation}
+      \alpha_1(C) = \int^5_2\, d\lambda = 3
+    \end{equation}
+    \begin{equation}
+      \alpha_2(C) = 4\int^3_1\, d\lambda = 8
+    \end{equation}
+    \begin{eqnarray}
+      \alpha_1(M) &=& \int \left[\beta_1 P_1(\lambda) + \beta_2 P_2(\lambda)\right]S_1(\lambda)\, d\lambda \\
+      &=& \int \beta_1 P_1(\lambda) S_1(\lambda)\, d\lambda + \int \beta_2 P_2(\lambda) S_1(\lambda)\, d\lambda \\
+      &=& \beta_1 \int^6_5\, d\lambda + \beta_2 \int^4_2\, d\lambda \\
+      &=& \beta_1 + 2\beta_2 = 3
+    \end{eqnarray}
+    \begin{eqnarray}
+      \alpha_2(M) &=& \int \left[\beta_1 P_1(\lambda) + \beta_2 P_2(\lambda)\right]S_2(\lambda)\, d\lambda \\
+      &=& \int \beta_1 P_1(\lambda) S_2(\lambda)\, d\lambda + \int \beta_2 P_2(\lambda) S_2(\lambda)\, d\lambda \\
+      &=& 0 + 4\beta_2\int^3_2\, d\lambda = 4\beta_2 = 8
+    \end{eqnarray}
+    \begin{eqnarray}
+      4\beta_2 &=& 8 \\
+      \beta_2 &=& 2 \\
+      \beta_1 &=& -1
+    \end{eqnarray}
+
+    This color is not achievable since there is a negative \beta, meaning it must be subtracted.
+
 \end{enumerate}
 
 \section{Computer Assignment}
