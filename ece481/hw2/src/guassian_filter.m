@@ -22,7 +22,7 @@ figure;
 i = 1;
 F = fft2(f);
 subplot(3,3,i); imshow(f); axis image; title('Original');
-for sig = [350 115 75 60 40 40 20 10]
+for sig = [350 115 75 60 50 40 20 10]
     H = fftshift(exp(-(u.^2 + v.^2)/(2*sig^2)));
     g = real(ifft2(F .* H));
     i = i + 1
