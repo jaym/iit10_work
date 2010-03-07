@@ -1,0 +1,57 @@
+
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%\usepackage{setspace}
+%\onehalfspacing
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{upquote}
+\pagestyle{fancyplain}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+\lhead{Jay Mundrawala}
+\rhead{ECE 481 - Homework 1}
+
+\section{Computer Assignment}
+Figure \ref{fig:fft} shows the fourier transform for the original image.
+\linebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/fft2.eps}
+  \caption{Results for filtering}
+  \label{fig:fft}
+\end{figure}
+
+Figure \ref{fig:filter} shows the results for applying the filter for different values of $\sigma$. The best result 
+comes from either $\sigma = 40$ or $\sigma = 50$. Lower values start bluring the image, while higher values do not
+remove the stripes.
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/plot2.eps}
+  \caption{Results for filtering}
+  \label{fig:filter}
+\end{figure}
+This can be seen in Figure \ref{fig:intensity}. This image shows the intensity of the two stars. As sigma goes down, so does
+their intensity. After a certain point, they are just blured together and not only can they not be distunguished from each other,
+but it is very difficult to distinguish the blob of stars from the background.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics{../data/intensity_2.eps}
+  \caption{Intensity Plots of 2 star section}
+  \label{fig:intensity}
+\end{figure}
+
+\end{document}
+
