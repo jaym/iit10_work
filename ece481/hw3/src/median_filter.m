@@ -2,7 +2,8 @@
 %          File: median_filter.m
 %        Author: Jay Mundrawala(jay@ir.iit.edu)
 %       Created: Sun Mar 7 2010
-%   Description: 
+%   Description: Given an image to filter, and the size of the window to take
+%                the median of, apply the median filter.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 function filtered = median_filter (to_filter, sz)
    
