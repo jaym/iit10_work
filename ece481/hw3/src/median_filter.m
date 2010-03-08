@@ -1,4 +1,9 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%          File: median_filter.m
+%        Author: Jay Mundrawala(jay@ir.iit.edu)
+%       Created: Sun Mar 7 2010
+%   Description: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 function filtered = median_filter (to_filter, sz)
    
 filtered = to_filter;
