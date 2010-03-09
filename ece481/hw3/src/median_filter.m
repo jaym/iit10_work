@@ -17,7 +17,7 @@ for i = 1:s(1)
             if (lwr  = i + sz) > s(1) lwr = s(1), end;
             if (rgt  = j + sz) > s(2) rgt = s(2), end;
 
-            filtered(i,j,dim) = median(vec(filtered(upr:lwr, lft:rgt,dim)));
+            filtered(i,j,dim) = median(vec(to_filter(upr:lwr, lft:rgt,dim)));
         end
     end
 end
