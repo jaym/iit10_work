@@ -13,8 +13,8 @@ f_rows = szf(1);
 f_cols = szf(2);
 h_rows = szh(1);
 h_cols = szh(2);
-pr_sz = f_rows * h_rows - 1;
-pc_sz = f_cols * h_cols - 1;
+pr_sz = f_rows + h_rows - 1;
+pc_sz = f_cols + h_cols - 1;
 if(colors > 1)
     for dim = 1:colors
         f_padded = [f(:,:,dim), zeros(f_rows,pc_sz - f_cols); zeros(pr_sz - f_rows, pc_sz)];
