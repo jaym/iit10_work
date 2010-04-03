@@ -1,0 +1,18 @@
+DIRECTORY STRUCTURE:
+.
+..
+data    ->
+---3b.eps          - Results for 3
+doc     ->
+---written.pdf
+images  ->
+---g.tif
+---f.tif
+src     ->
+---hw4.m           - Run this to get results for problem 3(a-c)
+---pinv_filter.m   - Applies the psuedoinverse filter
+---wiener_filter.m - Applies the wiener filter
+
+---------------------------------------------------------------------
+
+
